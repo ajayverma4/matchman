@@ -1,0 +1,29 @@
+<div class="card">
+  <h3>Starter Plan</h3>
+  <p>₹<span class="price">917</span>/workspace/month</p>
+  <select class="contact-select">
+    <option value="917">2000 Contacts</option>
+    <option value="1267">5000 Contacts</option>
+    <option value="1667">10000 Contacts</option>
+  </select>
+</div>
+
+<div class="card">
+  <h3>Business Plan</h3>
+  <p>₹<span class="price">1667</span>/workspace/month</p>
+  <select class="contact-select">
+    <option value="1667">2000 Contacts</option>
+    <option value="2167">5000 Contacts</option>
+    <option value="2667">10000 Contacts</option>
+  </select>
+</div>
+
+<script>
+  document.querySelectorAll('.contact-select').forEach(dropdown => {
+    dropdown.addEventListener('change', function () {
+      const card = this.closest('.card');
+      const price = card.querySelector('.price');
+      price.textContent = this.value;
+    });
+  });
+</script>

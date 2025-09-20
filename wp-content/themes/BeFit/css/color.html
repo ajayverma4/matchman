@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Section Background Changer</title>
+  <style>
+    #mySection {
+      width: 100%;
+      height: 300px;
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<section id="mySection"></section>
+
+<script>
+  // Your custom list of colors
+  const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8", "#F1C40F"];
+
+  let index = 0;
+  const section = document.getElementsByClassName("mySection");
+
+  setInterval(() => {
+    section.style.backgroundColor = colors[index];
+    index = (index + 1) % colors.length;
+  }, 1000); // change every second
+</script>
+
+</body>
+</html>
+
